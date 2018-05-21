@@ -137,6 +137,7 @@
         var extent
         var wfsSource = new ol.source.Vector({
 	        format: new ol.format.WFS({gmlFormat: ol.format.GML3 }),
+            attributions: 'Land NRW 2018 | <a href="https://www.govdata.de/dl-de/by-2-0">dl-de/by-2-0</a>',
 	        loader: function(extent, resolution, projection) {
 	            var epsg25832Extent = ol.proj.transformExtent(extent, 'EPSG:3857', 'urn:ogc:def:crs:EPSG::25832');
 	            for (var i=0;i<epsg25832Extent.length;i++) {
